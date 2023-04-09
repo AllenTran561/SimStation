@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6bed1232-7e94-441f-bdfc-db79e794e297" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimStation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/AppFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/AppPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/SafeFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MVC/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RandomWalks/RandomWalks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimStation/Heading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +24,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="20a18f83-6250-42d5-8c01-3f60ac673159" />
+        <option name="url" value="https://github.com/TheDangerousAsian/SimStation.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectId" id="2OCrirZLx54b84ozgr26RBPkKDc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,8 +51,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/ngjok/source/repos/CS 151/SimStation",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>

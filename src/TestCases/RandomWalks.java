@@ -1,9 +1,7 @@
-package RandomWalks;
+package TestCases;
 
 import MVC.*;
 import SimStation.*;
-import java.awt.*;
-import java.util.Iterator;
 
 class Drunk extends Agent {
 
