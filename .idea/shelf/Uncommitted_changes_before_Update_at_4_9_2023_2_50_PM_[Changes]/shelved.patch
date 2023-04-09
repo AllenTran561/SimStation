@@ -1,0 +1,130 @@
+Index: src/SimStation/SimStationView.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package SimStation;\r\n\r\npublic class SimStationView {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/SimStation/SimStationView.java b/src/SimStation/SimStationView.java
+--- a/src/SimStation/SimStationView.java	(revision 8f0b751b026322080d1bbb6f4dcc392c902713c3)
++++ b/src/SimStation/SimStationView.java	(date 1681076701385)
+@@ -1,4 +1,5 @@
+ package SimStation;
+ 
+ public class SimStationView {
++
+ }
+Index: src/RandomWalks/RandomWalks.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package RandomWalks;\r\n\r\nimport MVC.*;\r\nimport SimStation.*;\r\nimport java.awt.*;\r\nimport java.util.Iterator;\r\n\r\nclass Drunk extends Agent {\r\n\r\n    public Drunk() {\r\n        super();\r\n        heading = Heading.random();\r\n    }\r\n\r\n    public void update() {\r\n        heading = Heading.random();\r\n        int steps = Utilities.rng.nextInt(10) + 1;\r\n        move(steps);\r\n    }\r\n\r\n}\r\n\r\n\r\nclass RandomWalkFactory extends SimulationFactory {\r\n    public Model makeModel() { return new RandomWalkSimulation(); }\r\n    public String getTitle() { return \"Random Walks\";}\r\n}\r\n\r\npublic class RandomWalkSimulation extends Simulation {\r\n\r\n    public void populate() {\r\n        for(int i = 0; i < 15; i++)\r\n            addAgent(new Drunk());\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        AppPanel panel = new SimulationPanel(new RandomWalkFactory());\r\n        panel.display();\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/RandomWalks/RandomWalks.java b/src/RandomWalks/RandomWalks.java
+--- a/src/RandomWalks/RandomWalks.java	(revision 8f0b751b026322080d1bbb6f4dcc392c902713c3)
++++ b/src/RandomWalks/RandomWalks.java	(date 1681076774583)
+@@ -37,5 +37,4 @@
+         AppPanel panel = new SimulationPanel(new RandomWalkFactory());
+         panel.display();
+     }
+-
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6bed1232-7e94-441f-bdfc-db79e794e297\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/SimStation.iml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/AppFactory.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/AppPanel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/Bean.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/Command.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/Model.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/SafeFrame.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/Utilities.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/MVC/View.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/RandomWalks/RandomWalks.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/SimStation/Heading.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/SimStation/SimStation.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/SimStation/SimStationFactory.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/SimStation/SimStationPanel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/SimStation/SimStationView.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Enum\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6bed1232-7e94-441f-bdfc-db79e794e297\" name=\"Changes\" comment=\"\" />\r\n      <created>1680910156655</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1680910156655</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8f0b751b026322080d1bbb6f4dcc392c902713c3)
++++ b/.idea/workspace.xml	(date 1681076984540)
+@@ -1,24 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="6bed1232-7e94-441f-bdfc-db79e794e297" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/SimStation.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/AppFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/AppPanel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/Bean.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/Command.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/Model.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/SafeFrame.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/Utilities.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/MVC/View.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/RandomWalks/RandomWalks.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/SimStation/Heading.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationFactory.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/SimStation/SimStationView.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/RandomWalks/RandomWalks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomWalks/RandomWalks.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimStation/SimStationView.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -39,9 +28,26 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="a9a5f3b2-1b82-4d7a-b0d8-3e678b771900" />
++        <option name="url" value="https://github.com/TheDangerousAsian/SimStation" />
++      </UrlAndAccount>
++    </option>
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+   </component>
++  <component name="ProjectId" id="2OCrAe4ZffdXezmFbw0iqP8vYJg" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+@@ -51,11 +57,27 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "jdk.selected.JAVA_MODULE": "18",
++    "last_opened_file_path": "C:/Users/Allen/IdeaProjects/SimStation/src",
+     "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2"
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "MavenSettings"
+   }
+ }]]></component>
++  <component name="RunManager">
++    <configuration default="true" type="JetRunConfigurationType">
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <option name="filePath" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
