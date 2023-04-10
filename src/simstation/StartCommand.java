@@ -11,7 +11,7 @@ public class StartCommand extends Command {
 
     @Override
     public void execute() {
-        Simulation sim = (Simulation) model;
+        SimStation sim = (SimStation) model;
         sim.start();
     }
 }

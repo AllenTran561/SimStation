@@ -12,7 +12,7 @@ public class StatsCommand extends Command {
 
     @Override
     public void execute() {
-        Simulation simulation = (Simulation) model;
+        SimStation simulation = (SimStation) model;
         simulation.stats();
     }
 }

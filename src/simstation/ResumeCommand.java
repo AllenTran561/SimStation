@@ -11,7 +11,7 @@ public class ResumeCommand extends Command {
 
     @Override
     public void execute() {
-        Simulation simulation = (Simulation) model;
+        SimStation simulation = (SimStation) model;
         simulation.resume();
     }
 }
