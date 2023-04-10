@@ -1,4 +1,4 @@
-package MVC;
+package mvc;
 
 abstract public class Model extends Bean{
     private boolean unsavedChanges = false;

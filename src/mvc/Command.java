@@ -1,4 +1,4 @@
-package MVC;
+package mvc;
 
 abstract public class Command {
     public Model model;

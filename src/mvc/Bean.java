@@ -1,4 +1,4 @@
-package MVC;
+package mvc;
 
 import java.beans.*;
 import java.io.Serializable;
