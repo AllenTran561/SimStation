@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bed1232-7e94-441f-bdfc-db79e794e297" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/simstation/AgentState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/ResumeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/SimFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/StartCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/StatsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/StopCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simstation/SuspendCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/AppFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/AppPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Bean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/SafeFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/SafeFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MVC/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/Heading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvc/AppPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +59,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ngjok/source/repos/CS 151/SimStation&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
@@ -111,12 +93,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681080042145</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new classes and implemented all of Minh's work.">
+      <created>1681101008493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681101008493</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Renaming variables for consistency.">
+      <created>1681101135086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681101135086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added files for the rest of the test cases." />
     <MESSAGE value="Added Agent class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Agent class." />
+    <MESSAGE value="Added new classes and implemented all of Minh's work." />
+    <MESSAGE value="Renaming variables for consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renaming variables for consistency." />
   </component>
 </project>

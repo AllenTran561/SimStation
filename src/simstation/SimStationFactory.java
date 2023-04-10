@@ -15,11 +15,21 @@ public class SimStationFactory implements SimFactory, Serializable {
     }
 
     @Override
+    public View makeView(Model m) {
+        return null;
+    }
+
+    @Override
     public String[] getEditCommands() {
         return new String[] { "Start", "Suspend", "Resume", "Stop", "Stats" };
     }
 
     @Override
+    public Command makeEditCommand(Model model, String name, Object object) {
+        return null;
+    }
+
+    //@Override
     public Command makeEditCommand(Model model, String type) {
         if (type == "Start")
             return new StartCommand(model);
@@ -65,6 +75,6 @@ public class SimStationFactory implements SimFactory, Serializable {
 
     @Override
     public String about() {
-        return "Sim station version 1.0. copyright 2020 by ";
+        return "Sim station version 1.0. copyright 2023 by ";
     }
 }
