@@ -1,4 +1,4 @@
-package MVC;
+package mvc;
 
 public interface AppFactory {
     public Model makeModel();

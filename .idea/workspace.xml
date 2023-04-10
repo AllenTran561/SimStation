@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bed1232-7e94-441f-bdfc-db79e794e297" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/simstation/AgentState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/ResumeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/SimFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/StartCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/StatsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/StopCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/simstation/SuspendCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/AppFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/AppPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Bean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/SafeFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/SafeFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MVC/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/Heading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimStation/SimStationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +71,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/ngjok/source/repos/CS 151/SimStation",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ngjok/source/repos/CS 151/SimStation&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ngjok\source\repos\CS 151\SimStation\src\simstation" />
+      <recent name="C:\Users\ngjok\source\repos\CS 151\SimStation\src\SimStation" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,11 +104,19 @@
       <option name="project" value="LOCAL" />
       <updated>1681076874250</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Agent class.">
+      <created>1681080042145</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681080042145</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added files for the rest of the test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added files for the rest of the test cases." />
+    <MESSAGE value="Added Agent class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Agent class." />
   </component>
 </project>
