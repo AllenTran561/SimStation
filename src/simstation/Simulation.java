@@ -7,7 +7,7 @@ import mvc.*;
 
 import javax.swing.*;
 
-public class SimStation extends Model {
+public class Simulation extends Model {
 
     public static Integer WORLD_SIZE = 250;
     public static Integer DOT_SIZE = 5;
@@ -19,7 +19,7 @@ public class SimStation extends Model {
     public Integer NUM_OF_AGENTS = 250;
 
     /* constructor */
-    public SimStation() {
+    public Simulation() {
         agentList = new ArrayList<>();
         clock = 0;
     }

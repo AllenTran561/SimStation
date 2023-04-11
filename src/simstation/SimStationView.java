@@ -14,7 +14,7 @@ public class SimStationView extends View {
     }
 
     public void paintComponent(Graphics gc) {
-        SimStation sim = (SimStation) model;
+        Simulation sim = (Simulation) model;
 
         for (Agent a : sim.getAgentList()) {
             gc.setColor(Color.RED);

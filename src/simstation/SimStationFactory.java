@@ -7,7 +7,7 @@ import mvc.View;
 import java.io.Serializable;
 
 public class SimStationFactory implements SimFactory, Serializable {
-    private SimStation sim = new SimStation();
+    private Simulation sim = new Simulation();
 
     @Override
     public Model makeModel() {
@@ -48,11 +48,11 @@ public class SimStationFactory implements SimFactory, Serializable {
         return new SimStationView(sim);
     }
 
-    public SimStation getSim() {
+    public Simulation getSim() {
         return this.sim;
     }
 
-    public void setSim(SimStation sim) {
+    public void setSim(Simulation sim) {
         this.sim = sim;
     }
 

@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bed1232-7e94-441f-bdfc-db79e794e297" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/RandomWalks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvc/AppPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvc/AppPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/ResumeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/ResumeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SimStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/StartCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/StartCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/StatsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/StatsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/StopCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/StopCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SuspendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SuspendCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681101135086</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Used a different AppPanel, made a couple adjustments to AppPanel, commented out an Override, added a main method to SimStationPanel.">
+      <created>1681102961883</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681102961883</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,6 +127,8 @@
     <MESSAGE value="Added Agent class." />
     <MESSAGE value="Added new classes and implemented all of Minh's work." />
     <MESSAGE value="Renaming variables for consistency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Renaming variables for consistency." />
+    <MESSAGE value="Used a different AppPanel, made a couple adjustments to AppPanel, commented out an Override." />
+    <MESSAGE value="Used a different AppPanel, made a couple adjustments to AppPanel, commented out an Override, added a main method to SimStationPanel." />
+    <option name="LAST_COMMIT_MESSAGE" value="Used a different AppPanel, made a couple adjustments to AppPanel, commented out an Override, added a main method to SimStationPanel." />
   </component>
 </project>
