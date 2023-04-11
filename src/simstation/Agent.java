@@ -11,7 +11,7 @@ public abstract class Agent implements Runnable, Serializable {
     private Integer xc, yc;
     private AgentState state;
     transient private Thread thread; // Thread is not serializable so it has to be transient
-    protected SimStation world;
+    protected Simulation world;
     public Heading heading;
     protected int speed;
 
@@ -31,7 +31,7 @@ public abstract class Agent implements Runnable, Serializable {
 
     }
 
-    public void setWorld(SimStation world) {
+    public void setWorld(Simulation world) {
         this.world = world;
     }
 
