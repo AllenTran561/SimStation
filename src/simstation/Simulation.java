@@ -24,7 +24,7 @@ public class Simulation extends Model {
         clock = 0;
     }
 
-    public void add(Agent a) {
+    public void addAgent(Agent a) {
         agentList.add(a);
         a.setWorld(this);
     }
