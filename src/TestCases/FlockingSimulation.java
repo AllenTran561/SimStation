@@ -42,7 +42,7 @@ class FlockingFactory extends SimStationFactory {
     }
 }
 
-class FlockingSimulation extends Simulation {
+public class FlockingSimulation extends Simulation {
 
     public void populate() {
         Random r = new Random();
