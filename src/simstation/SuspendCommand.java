@@ -11,7 +11,7 @@ public class SuspendCommand extends Command {
 
     @Override
     public void execute() {
-        SimStation simulation = (SimStation) model;
+        Simulation simulation = (Simulation) model;
         simulation.suspend();
     }
 }
