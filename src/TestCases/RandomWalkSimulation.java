@@ -26,7 +26,7 @@ class RandomWalkFactory extends SimStationFactory {
     public String getTitle() { return "Random Walks";}
 }
 
-public class RandomWalkSimulation extends SimStation {
+public class RandomWalkSimulation extends Simulation {
 
     public void populate() {
         for (int i = 0; i < 15; i++) {
