@@ -1,5 +1,5 @@
 package TestCases;
-/*
+
 import mvc.*;
 import simstation.*;
 
@@ -7,17 +7,19 @@ class Drunk extends Agent {
 
     public Drunk() {
         super();
-        heading = Heading.random();
+        heading = Heading.randomHeading();
     }
 
     public void update() {
-        heading = Heading.random();
+        heading = Heading.randomHeading();
         int steps = Utilities.rng.nextInt(10) + 1;
         move(steps);
     }
-
+    @Override
+    public int getSpeed(){
+        return 0;   //unfinished
+    }
 }
-
 
 class RandomWalkFactory extends SimStationFactory {
     public Model makeModel() { return new RandomWalkSimulation(); }
@@ -27,16 +29,13 @@ class RandomWalkFactory extends SimStationFactory {
 public class RandomWalkSimulation extends SimStation {
 
     public void populate() {
-        for(int i = 0; i < 15; i++)
+        for (int i = 0; i < 15; i++) {
             addAgent(new Drunk());
+        }
     }
 
     public static void main(String[] args) {
         AppPanel panel = new SimStationPanel(new RandomWalkFactory());
         panel.display();
     }
-
 }
-
-
- */

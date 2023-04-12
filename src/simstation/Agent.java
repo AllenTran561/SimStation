@@ -36,6 +36,7 @@ public abstract class Agent implements Runnable, Serializable {
     }
 
     public synchronized void start() {
+        System.out.println("start");
         state = AgentState.RUNNING;
         thread = new Thread(this);
         thread.start();

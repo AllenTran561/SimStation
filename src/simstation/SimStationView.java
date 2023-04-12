@@ -15,10 +15,10 @@ public class SimStationView extends View {
 
     public void paintComponent(Graphics gc) {
         SimStation sim = (SimStation) model;
-
         for (Agent a : sim.getAgentList()) {
             gc.setColor(Color.RED);
             gc.fillOval(a.getX_Pos(), a.getY_Pos(), sim.DOT_SIZE, sim.DOT_SIZE);
+
         }
     }
 }

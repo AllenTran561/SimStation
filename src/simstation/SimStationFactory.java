@@ -25,12 +25,7 @@ public class SimStationFactory implements SimFactory, Serializable {
     }
 
     @Override
-    public Command makeEditCommand(Model model, String name, Object object) {
-        return null;
-    }
-
-    //@Override
-    public Command makeEditCommand(Model model, String type) {
+    public Command makeEditCommand(Model model, String type, Object object) {
         if (type == "Start")
             return new StartCommand(model);
         else if (type == "Stop")
