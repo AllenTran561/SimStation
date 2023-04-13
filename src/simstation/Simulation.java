@@ -89,7 +89,7 @@ public class Simulation extends Model {
                 + "\nclock = " + clock);
     }
 
-    public synchronized Agent getNeighbor(Agent a, double radius) {
+    public synchronized Agent getNeighbor(Agent a, int radius) {
 
         double distance;
         double x;
