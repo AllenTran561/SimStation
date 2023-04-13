@@ -14,7 +14,7 @@ public abstract class Agent implements Runnable, Serializable {
     protected Simulation world;
     public Heading heading;
     protected int speed;
-
+    protected Color agentColor;
     public int random;
 
     public Agent() {
@@ -177,4 +177,6 @@ public abstract class Agent implements Runnable, Serializable {
     }
 
     public abstract int getSpeed();
+
+    public void setAgentColor(Color agentColor) { this.agentColor = agentColor; }
 }

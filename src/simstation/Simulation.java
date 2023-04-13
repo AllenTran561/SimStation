@@ -89,12 +89,11 @@ public class Simulation extends Model {
                 + "\nclock = " + clock);
     }
 
-    public synchronized Agent getNeighbor(Agent a) {
+    public synchronized Agent getNeighbor(Agent a, double radius) {
 
         double distance;
         double x;
         double y;
-        int radius = 10; // Radius to check nearest neighbor
         ArrayList<Agent> neighborsList = (ArrayList<Agent>) agentList.clone(); // copy agentList
         int random;
 
