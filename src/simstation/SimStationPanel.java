@@ -14,7 +14,7 @@ public class SimStationPanel extends AppPanel {
         super(factory);
 
         // Preparing the simulationView, the canvas the agent walks around on
-        SimStationView view = (SimStationView) factory.getView(factory.makeModel());
+        SimStationView view = (SimStationView) factory.makeView(factory.makeModel());
         view.setPreferredSize(new Dimension(250, 250));
 
         // Preparing the panel to hold all the buttons

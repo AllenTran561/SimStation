@@ -16,7 +16,8 @@ public class SimStationFactory implements SimFactory, Serializable {
 
     @Override
     public View makeView(Model m) {
-        return null;
+        System.out.println("factory view");
+        return new SimStationView((Simulation)m);
     }
 
     @Override
@@ -39,9 +40,6 @@ public class SimStationFactory implements SimFactory, Serializable {
         return null;
     }
 
-    public View getView(Model m) {
-        return new SimStationView(sim);
-    }
 
     public Simulation getSim() {
         return this.sim;

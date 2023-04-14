@@ -8,6 +8,7 @@ public class View extends JPanel implements PropertyChangeListener {
 
     public Model model;
     public View(Model m){
+        super();
         this.model = m;
         model.addPropertyChangeListener(this);
     }
@@ -16,6 +17,7 @@ public class View extends JPanel implements PropertyChangeListener {
         this.model = model;
         this.model.initSupport();
         this.model.addPropertyChangeListener(this);
+        System.out.println("changed");
         repaint();
     }
     @Override

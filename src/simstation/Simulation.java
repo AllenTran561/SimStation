@@ -11,10 +11,8 @@ public class Simulation extends Model {
 
     public static Integer WORLD_SIZE = 250;
     public static Integer DOT_SIZE = 5;
-
     private transient Timer timer; // Transient because Timer is not serializable
     protected int clock;
-
     public ArrayList<Agent> agentList;
     public Integer NUM_OF_AGENTS = 250;
 
@@ -58,8 +56,9 @@ public class Simulation extends Model {
         }
         populate();
         startTimer();
-        for (Agent a : agentList)
+        for (Agent a : agentList) {
             a.start();
+        }
     }
 
     public void stop() {
@@ -131,5 +130,7 @@ public class Simulation extends Model {
     public int getClock() {
         return clock;
     }
-
+    public int getDotSize() {
+        return DOT_SIZE;
+    }
 }
