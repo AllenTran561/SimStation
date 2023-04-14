@@ -6,7 +6,7 @@ import java.awt.*;
 import java.io.Serializable;
 
 public abstract class Agent implements Runnable, Serializable {
-
+    public static int WORLD_SIZE = 250;
     public String name;
     private Integer xc, yc;
     private AgentState state;
@@ -16,6 +16,7 @@ public abstract class Agent implements Runnable, Serializable {
     protected int speed;
     protected Color agentColor;
     public int random;
+
 
     public Agent() {
         state = AgentState.READY;
@@ -28,7 +29,6 @@ public abstract class Agent implements Runnable, Serializable {
 
         random = Utilities.rng.nextInt(Heading.values().length); // random heading
         heading = Heading.values()[random];
-
     }
 
     public void setWorld(Simulation world) {
