@@ -16,7 +16,6 @@ public class SimStationFactory implements SimFactory, Serializable {
 
     @Override
     public View makeView(Model m) {
-        System.out.println("factory view");
         return new SimStationView((Simulation)m);
     }
 
