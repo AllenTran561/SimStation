@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //Provided by instructor
-public class AppPanel extends JPanel implements PropertyChangeListener, ActionListener  {
+public class AppPanel extends JPanel implements PropertyChangeListener, ActionListener {
 
     protected Model model;
     protected AppFactory factory;
@@ -24,7 +24,8 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
         this.factory = factory;
         model = factory.makeModel();
         views = new HashSet<View>();
-        if (model != null) model.addPropertyChangeListener(this);
+        if (model != null)
+            model.addPropertyChangeListener(this);
 
         frame = new JFrame();
         Container cp = frame.getContentPane();
@@ -35,22 +36,29 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
     }
 
-    public void addView(View view) { views.add(view); }
+    public void addView(View view) {
+        views.add(view);
+    }
 
     @Override
     public Component add(Component c) {
-        if ( c instanceof View) addView((View)c);
+        if (c instanceof View)
+            addView((View) c);
         return super.add(c);
     }
 
-    public void display() { frame.setVisible(true); }
+    public void display() {
+        frame.setVisible(true);
+    }
 
     //
     public void propertyChange(PropertyChangeEvent evt) {
         /* override in extensions if needed */
     }
 
-    public Model getModel() { return model; }
+    public Model getModel() {
+        return model;
+    }
 
     // called by file/open and file/new
     public void setModel(Model newModel) {
@@ -58,23 +66,21 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
         this.model = newModel;
         this.model.initSupport();
         this.model.addPropertyChangeListener(this);
-        for(View view: views) view.setModel(this.model);
-        //alternatively: this.model.copy(model);
+        for (View view : views)
+            view.setModel(this.model);
+        // alternatively: this.model.copy(model);
     }
 
     protected JMenuBar createMenuBar() {
         JMenuBar result = new JMenuBar();
         // add file, edit, and help menus
-        JMenu fileMenu =
-                Utilities.makeMenu("File", new String[] {"New",  "Save", "SaveAs", "Open", "Quit"}, this);
+        JMenu fileMenu = Utilities.makeMenu("File", new String[] { "New", "Save", "SaveAs", "Open", "Quit" }, this);
         result.add(fileMenu);
 
-        JMenu editMenu =
-                Utilities.makeMenu("Edit", factory.getEditCommands(), this);
+        JMenu editMenu = Utilities.makeMenu("Edit", factory.getEditCommands(), this);
         result.add(editMenu);
 
-        JMenu helpMenu =
-                Utilities.makeMenu("Help", new String[] {"About", "Help"}, this);
+        JMenu helpMenu = Utilities.makeMenu("Help", new String[] { "About", "Help" }, this);
         result.add(helpMenu);
 
         return result;
@@ -89,7 +95,8 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
             Utilities.save(model, true);
         } else if (cmmd == "Open") {
             Model newModel = Utilities.open(model);
-            if (newModel != null) setModel(newModel);
+            if (newModel != null)
+                setModel(newModel);
         } else if (cmmd == "New") {
             Utilities.saveChanges(model);
             setModel(factory.makeModel());
@@ -103,10 +110,12 @@ public class AppPanel extends JPanel implements PropertyChangeListener, ActionLi
         } else if (cmmd == "Help") {
             Utilities.inform(factory.getHelp());
         } else {
-            Command command = factory.makeEditCommand(model, cmmd, this);
             try {
+                Command command = factory.makeEditCommand(model, cmmd, this);
                 command.execute();
-            } catch (Exception e) {
+            }
+
+            catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
