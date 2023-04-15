@@ -26,9 +26,7 @@ public class SimStationView extends View {
         g2d.setColor(new Color(50, 50, 50));
         g2d.fillRect(0, 0,  width,  height);
         g2d.setColor(new Color(50, 200, 100));
-        //System.out.println(agents);
         for (Agent a : agents) {
-            System.out.println("agent");
             gc.setColor(Color.RED);
             gc.fillOval(a.getX_Pos(), a.getY_Pos(), sim.getDotSize(), sim.getDotSize());
         }
