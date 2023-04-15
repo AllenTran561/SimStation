@@ -15,15 +15,38 @@ class Drunk extends Agent {
         int steps = Utilities.rng.nextInt(10) + 1;
         move(steps);
     }
+
     @Override
-    public int getSpeed(){
-        return 0;   //unfinished
+    public int getSpeed() {
+        return 0; // unfinished
     }
 }
 
 class RandomWalkFactory extends SimStationFactory {
-    public Model makeModel() { return new RandomWalkSimulation(); }
-    public String getTitle() { return "Random Walks";}
+    public RandomWalkFactory() {
+        setSim(new RandomWalkSimulation());
+    }
+
+    @Override
+    public Model makeModel() {
+        return getSim();
+    }
+
+    @Override
+    public String getTitle() {
+        return "Random Walks (Drunks) Simulation";
+    }
+
+    @Override
+    public String[] getHelp() {
+        // put something later
+        String[] cmmds = new String[3];
+        cmmds[0] = "#agents: # of dots";
+        cmmds[1] = "clock: start timer when you start the simulation and pause when you press suspend";
+        cmmds[2] = "Agents move randomly with random speed";
+
+        return cmmds;
+    }
 }
 
 public class RandomWalkSimulation extends Simulation {
