@@ -14,11 +14,9 @@ abstract public class Bean implements Serializable {
      * inherits them). Therefore we declare them to
      * be transient.
      */
-    transient protected PropertyChangeSupport mPcs =
-            new PropertyChangeSupport(this);
+    transient protected PropertyChangeSupport mPcs = new PropertyChangeSupport(this);
 
-    transient protected VetoableChangeSupport mVcs =
-            new VetoableChangeSupport(this);
+    transient protected VetoableChangeSupport mVcs = new VetoableChangeSupport(this);
 
     /*
      * When a saved model is read back in from a file we
@@ -26,8 +24,10 @@ abstract public class Bean implements Serializable {
      * weren't saved:
      */
     public void initSupport() {
-        if (mPcs == null) mPcs = new PropertyChangeSupport(this);
-        if (mVcs == null) mVcs = new VetoableChangeSupport(this);
+        if (mPcs == null)
+            mPcs = new PropertyChangeSupport(this);
+        if (mVcs == null)
+            mVcs = new VetoableChangeSupport(this);
     }
 
     public void fireVetoableChange(String propertyName, Object oldValue, Object newValue) throws PropertyVetoException {
@@ -55,4 +55,3 @@ abstract public class Bean implements Serializable {
     }
 
 }
-

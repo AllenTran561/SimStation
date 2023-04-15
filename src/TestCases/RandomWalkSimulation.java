@@ -23,23 +23,17 @@ class Drunk extends Agent {
 }
 
 class RandomWalkFactory extends SimStationFactory {
-    public RandomWalkFactory() {
-        setSim(new RandomWalkSimulation());
-    }
-
-    @Override
     public Model makeModel() {
-        return getSim();
+        return new RandomWalkSimulation();
     }
 
-    @Override
     public String getTitle() {
-        return "Random Walks (Drunks) Simulation";
+        return "Random Walks";
     }
 
     @Override
     public String[] getHelp() {
-        // put something later
+
         String[] cmmds = new String[3];
         cmmds[0] = "#agents: # of dots";
         cmmds[1] = "clock: start timer when you start the simulation and pause when you press suspend";
