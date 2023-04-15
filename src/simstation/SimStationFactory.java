@@ -7,17 +7,16 @@ import mvc.View;
 import java.io.Serializable;
 
 public class SimStationFactory implements SimFactory, Serializable {
-    private Simulation sim = new Simulation();
 
     @Override
     public Model makeModel() {
-        return sim;
+        return new Simulation();
     }
 
     @Override
     public View makeView(Model m) {
         System.out.println("factory view");
-        return new SimStationView((Simulation)m);
+        return new SimStationView((Simulation) m);
     }
 
     @Override
@@ -38,15 +37,6 @@ public class SimStationFactory implements SimFactory, Serializable {
         else if (type == "Stats")
             return new StatsCommand(model);
         return null;
-    }
-
-
-    public Simulation getSim() {
-        return this.sim;
-    }
-
-    public void setSim(Simulation sim) {
-        this.sim = sim;
     }
 
     @Override

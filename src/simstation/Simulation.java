@@ -40,6 +40,7 @@ public class Simulation extends Model {
     private class ClockUpdater extends TimerTask {
         public void run() {
             clock++;
+            changed();
         }
     }
 
@@ -114,6 +115,7 @@ public class Simulation extends Model {
         } else {
             return null;
         }
+
     }
 
     public void populate() {
@@ -130,6 +132,7 @@ public class Simulation extends Model {
     public int getClock() {
         return clock;
     }
+
     public int getDotSize() {
         return DOT_SIZE;
     }
