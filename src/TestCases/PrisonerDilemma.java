@@ -4,15 +4,17 @@ import java.io.Serializable;
 import mvc.*;
 import simstation.*;
 import java.text.DecimalFormat;
+import java.util.Random;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-abstract class Strategy implements Serializable {
-    protected int toCompare; // used to compare the different extended strategy Objects
+abstract class AbstractStrategy implements Serializable {
+    protected int strategyCode; // code used to identify and compare the different strategy objects
 
-    abstract boolean executeStrategy(Boolean... previous);
+    abstract boolean applyStrategy(Boolean... previousActions);
 
-    abstract boolean equals(Strategy that);
+    abstract boolean areStrategiesEqual(AbstractStrategy other);
 }
 
 class StatsCommand extends Command {
@@ -27,72 +29,60 @@ class StatsCommand extends Command {
     }
 }
 
-class RandomlyCooperate extends Strategy {
-    public RandomlyCooperate() {
-        toCompare = 3; // How to compare the object of strategy
+class RandomCooperation extends AbstractStrategy {
+    public RandomCooperation() {
+        strategyCode = 3;
     }
 
-    public boolean executeStrategy(Boolean... booleans) {
-        return Utilities.rng.nextBoolean(); // return a random boolean
+    public boolean applyStrategy(Boolean... previousActions) {
+        Random rng = new Random(); // Create a random object
+        return rng.nextBoolean(); // return a random boolean
     }
 
-    public boolean equals(Strategy that) {
-        if (this.toCompare == that.toCompare) {
-            return true;
-        }
-        return false;
+    public boolean areStrategiesEqual(AbstractStrategy other) {
+        return this.strategyCode == other.strategyCode;
     }
 }
 
-class CooperateIfLastCooperated extends Strategy {
-    public CooperateIfLastCooperated() {
-        toCompare = 4; // How to compare the object of strategy
+class CooperateOnPreviousCooperation extends AbstractStrategy {
+    public CooperateOnPreviousCooperation() {
+        strategyCode = 4;
     }
 
-    public boolean executeStrategy(Boolean... booleans) {
-        return booleans[0]; // returns previous inmates cheat or cooperation
+    public boolean applyStrategy(Boolean... previousActions) {
+        return previousActions[0];
     }
 
-    public boolean equals(Strategy that) {
-        if (this.toCompare == that.toCompare) {
-            return true;
-        }
-        return false;
+    public boolean areStrategiesEqual(AbstractStrategy other) {
+        return this.strategyCode == other.strategyCode;
     }
 }
 
-class AlwaysCooperate extends Strategy {
-    public AlwaysCooperate() {
-        toCompare = 2; // How to compare the object of strategy
+class CooperateAlways extends AbstractStrategy {
+    public CooperateAlways() {
+        strategyCode = 2;
     }
 
-    public boolean executeStrategy(Boolean... booleans) {
+    public boolean applyStrategy(Boolean... previousActions) {
         return true;
     }
 
-    public boolean equals(Strategy that) {
-        if (this.toCompare == that.toCompare) {
-            return true;
-        }
-        return false;
+    public boolean areStrategiesEqual(AbstractStrategy other) {
+        return this.strategyCode == other.strategyCode;
     }
 }
 
-class AlwaysCheat extends Strategy {
-    public AlwaysCheat() {
-        toCompare = 1; // How to compare the object of strategy
+class CheatAlways extends AbstractStrategy {
+    public CheatAlways() {
+        strategyCode = 1;
     }
 
-    public boolean executeStrategy(Boolean... booleans) {
+    public boolean applyStrategy(Boolean... previousActions) {
         return false;
     }
 
-    public boolean equals(Strategy that) {
-        if (this.toCompare == that.toCompare) // compares two different strategies
-        {
-            return true;
-        }
-        return false;
+    public boolean areStrategiesEqual(AbstractStrategy other) {
+        return this.strategyCode == other.strategyCode;
     }
 }
 
@@ -122,56 +112,56 @@ class PrisonerFactory extends SimStationFactory {
 class Prisoner extends Agent {
 
     public static int NUMBER_OF_STRATEGIES = 4;
-    public static Strategy[] strategies = new Strategy[] { new AlwaysCheat(),
-            new AlwaysCooperate(),
-            new RandomlyCooperate(),
-            new CooperateIfLastCooperated() };
+    public static AbstractStrategy[] strategies = new AbstractStrategy[] {
+            new CheatAlways(),
+            new CooperateAlways(),
+            new RandomCooperation(),
+            new CooperateOnPreviousCooperation()
+    };
     private int fitness;
-    private boolean previousCooperate; // used for a Strategy object
-    private Strategy strategy; // holds current strategy
+    private boolean previousCooperation;
+    private AbstractStrategy strategy;
 
     public Prisoner() {
         fitness = 0;
-        strategy = strategies[Utilities.rng.nextInt(4)]; // randomize the strategy to use
-        previousCooperate = true;
+        strategy = strategies[Utilities.rng.nextInt(NUMBER_OF_STRATEGIES)];
+        previousCooperation = true;
     }
 
     public void update() {
         PrisonerDilemma prison = (PrisonerDilemma) world;
         Prisoner player2 = (Prisoner) prison.getNeighbor(this, 10);
         if (player2 != null) {
-            if (this.cooperate() == true && player2.cooperate() == true) // player1 and player 2 cooperate
-            {
+            boolean cooperation1 = this.cooperate();
+            boolean cooperation2 = player2.cooperate();
+
+            if (cooperation1 && cooperation2) {
                 this.fitness += 3;
                 player2.fitness += 3;
-            } else if (this.cooperate() == true && player2.cooperate() == false) // player1 cooperates and playeer2
-                                                                                 // cheats
-            {
+            } else if (cooperation1 && !cooperation2) {
                 player2.fitness += 5;
-            } else if (this.cooperate() == false && player2.cooperate() == true) // player1 cheats and player2 cooperate
-            {
+            } else if (!cooperation1 && cooperation2) {
                 this.fitness += 5;
-            } else if (this.cooperate() == false && player2.cooperate() == false) // player1 and player 2 cheat
-            {
+            } else {
                 this.fitness += 1;
                 player2.fitness += 1;
             }
-            previousCooperate = player2.cooperate();
+            previousCooperation = player2.cooperate();
         }
-        heading = Heading.values()[Utilities.rng.nextInt(4)]; // randomizes the next heading
-        move(Utilities.rng.nextInt(10)); // randomizes the movement
+        heading = Heading.values()[Utilities.rng.nextInt(4)];
+        move(Utilities.rng.nextInt(10));
     }
 
     private boolean cooperate() {
-        return strategy.executeStrategy(previousCooperate); // used to get the Strategys boolean (cheat or cooperate)
+        return strategy.applyStrategy(previousCooperation);
     }
 
-    public Strategy getStrategy() {
+    public AbstractStrategy getStrategy() {
         return strategy;
     }
 
     @Override
-    public int getSpeed() { // not sure if this method is required for prisoner
+    public int getSpeed() {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -189,48 +179,37 @@ public class PrisonerDilemma extends Simulation {
         }
     }
 
-    public void stats() // used to create a new stats panel for Prisoner stats
-    {
+    // used to create a new stats panel for Prisoner stats
+    public void stats() {
         JFrame frame = new JFrame();
         JOptionPane.showMessageDialog(frame, "#agents = " + NUM_OF_AGENTS
                 + "\nclock = " + clock + "\n" + getStats());
     }
 
-    private String getStats() // to get a String of the prisoner stats
-    {
+    private String getStats() {
         String statsString = "";
-        double average1 = 0, average2 = 0, average3 = 0, average4 = 0;
-        double strategy1Prisoners = 0, strategy2Prisoners = 0, strategy3Prisoners = 0, strategy4Prisoners = 0;
-        DecimalFormat df2 = new DecimalFormat("#.##"); // better formatting
+        double[] totalFitness = new double[Prisoner.NUMBER_OF_STRATEGIES];
+        int[] strategyCounts = new int[Prisoner.NUMBER_OF_STRATEGIES];
 
         for (Agent a : agentList) {
             Prisoner prisoner = (Prisoner) a;
-            if (prisoner.getStrategy().equals(Prisoner.strategies[0])) // uses equals method to compare the strategy
-                                                                       // objects
-            {
-                strategy1Prisoners += 1;
-                average1 += prisoner.getFitness();
-            } else if (prisoner.getStrategy().equals(Prisoner.strategies[1])) {
-                strategy2Prisoners += 1;
-                average2 += prisoner.getFitness();
-            } else if (prisoner.getStrategy().equals(Prisoner.strategies[2])) {
-                strategy3Prisoners += 1;
-                average3 += prisoner.getFitness();
-            } else if (prisoner.getStrategy().equals(Prisoner.strategies[3])) {
-                strategy4Prisoners += 1;
-                average4 += prisoner.getFitness();
+            for (int i = 0; i < Prisoner.NUMBER_OF_STRATEGIES; i++) {
+                if (prisoner.getStrategy().areStrategiesEqual(Prisoner.strategies[i])) {
+                    strategyCounts[i]++;
+                    totalFitness[i] += prisoner.getFitness();
+                    break;
+                }
             }
         }
 
-        average1 /= strategy1Prisoners;
-        average2 /= strategy2Prisoners;
-        average3 /= strategy3Prisoners;
-        average4 /= strategy4Prisoners;
+        for (int i = 0; i < Prisoner.NUMBER_OF_STRATEGIES; i++) {
+            totalFitness[i] /= strategyCounts[i];
+        }
 
-        statsString = "Always Cheat Average Fitness: " + df2.format(average1) +
-                "\nAlways Cooperate Average Fitness: " + df2.format(average2) +
-                "\nRandomly Cooperate Average Fitness: " + df2.format(average3) +
-                "\nPrevious Opponent Strategy Average: " + df2.format(average4);
+        statsString = "Always Cheat Average Fitness: " + String.format("%.2f", totalFitness[0]) +
+                "\nAlways Cooperate Average Fitness: " + String.format("%.2f", totalFitness[1]) +
+                "\nRandomly Cooperate Average Fitness: " + String.format("%.2f", totalFitness[2]) +
+                "\nPrevious Opponent Strategy Average: " + String.format("%.2f", totalFitness[3]);
         return statsString;
     }
 
