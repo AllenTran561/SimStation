@@ -23,10 +23,8 @@ public abstract class Agent implements Runnable, Serializable {
         // color = Color.RED;
         world = null;
         thread = null;
-
         xc = Utilities.rng.nextInt(249) + 1; // initially random position 1-250
         yc = Utilities.rng.nextInt(249) + 1;
-
         random = Utilities.rng.nextInt(Heading.values().length); // random heading
         heading = Heading.values()[random];
     }
