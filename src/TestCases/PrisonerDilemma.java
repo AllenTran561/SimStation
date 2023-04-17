@@ -1,5 +1,6 @@
 package TestCases;
 
+import java.awt.*;
 import java.io.Serializable;
 import mvc.*;
 import simstation.*;
@@ -130,6 +131,7 @@ class Prisoner extends Agent {
         fitness = 0;
         strategy = strategies[Utilities.rng.nextInt(NUMBER_OF_STRATEGIES)];
         previousCooperation = true;
+        this.setAgentColor(Color.WHITE);
     }
 
     public void update() {

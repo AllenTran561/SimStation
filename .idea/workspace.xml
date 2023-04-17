@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e17158-8a55-4aac-801d-f1e730a35b1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TestCases/PlagueSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestCases/Plague.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/PrisonerDilemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/PrisonerDilemma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +25,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
