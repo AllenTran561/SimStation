@@ -3,11 +3,15 @@ package TestCases;
 import java.io.Serializable;
 import mvc.*;
 import simstation.*;
-import java.text.DecimalFormat;
 import java.util.Random;
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
+/* Test Case "PrisonerDilemma" Datalog
+4/9/2023 - Niko Jokhadze: Created file
+4/15/2023 - Minh Bui: Implemented all methods
+4/16/2023 - Minh Bui: Revised and finalized all methods
+*/
 
 abstract class AbstractStrategy implements Serializable {
     protected int strategyCode; // code used to identify and compare the different strategy objects

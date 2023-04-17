@@ -1,11 +1,15 @@
-
 package simstation;
 
 import java.util.*;
 import java.util.Timer;
 import mvc.*;
-
 import javax.swing.*;
+
+/* Class "Simulation" Datalog
+4/7/2023 - Allen Tran: Created file
+4/9/2023 - Allen Tran and Minh Bui: Implemented all methods
+4/11/2023 - Niko Jokhadze: Renamed a few variables for consistency
+*/
 
 public class Simulation extends Model {
 
@@ -45,7 +49,7 @@ public class Simulation extends Model {
     }
 
     public void start() {
-        System.out.println("start");
+        //System.out.println("start");
         clock = 0;
         if (agentList.size() != 0) { // Account for an empty agentList
             if (timer != null) { // Accounting for the null timer when a save is loaded

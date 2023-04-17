@@ -2,12 +2,20 @@ package TestCases;
 
 import mvc.*;
 import simstation.*;
+import java.awt.*;
+
+/* Test Case "RandomWalk" Datalog
+4/9/2023 - Niko Jokhadze: Created file
+4/9/2023 - Allen Tran: Edited file
+4/12/2023 - Allen Tran: Finished implementing methods
+*/
 
 class Drunk extends Agent {
 
     public Drunk() {
         super();
         heading = Heading.randomHeading();
+        this.setAgentColor(Color.WHITE);
     }
 
     public void update() {

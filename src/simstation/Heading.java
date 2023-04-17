@@ -1,7 +1,11 @@
-
 package simstation;
 
 import java.util.*;
+
+/* Enumeration "Heading" Datalog
+4/7/2023 - Allen Tran: Created file and implemented methods
+*/
+
 public enum Heading {
     EAST, WEST, NORTH, SOUTH;
 

@@ -1,8 +1,11 @@
-
 package simstation;
 
 import mvc.Command;
 import mvc.Model;
+
+/* Class "StatsCommand" Datalog
+4/9/2023 - Minh Bui: Created file and implemented methods
+*/
 
 public class StatsCommand extends Command {
 

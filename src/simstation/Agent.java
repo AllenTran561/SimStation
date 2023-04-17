@@ -1,9 +1,14 @@
 package simstation;
 
 import mvc.Utilities;
-
 import java.awt.*;
 import java.io.Serializable;
+
+/* Class "StartCommand" Datalog
+4/9/2023 - Niko Jokhadze: Created file
+4/9/2023 - Minh Bui: Implemented all methods
+4/13/2023 - Niko Jokhadze: Edited a couple of methods
+*/
 
 public abstract class Agent implements Runnable, Serializable {
     public static int WORLD_SIZE = 250;
