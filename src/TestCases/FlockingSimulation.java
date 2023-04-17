@@ -2,7 +2,14 @@ package TestCases;
 
 import mvc.*;
 import simstation.*;
+import java.awt.*;
 import java.util.Random;
+
+/* Test Case "Flocking" Datalog
+4/9/2023 - Niko Jokhadze: Created file
+4/9/2023 - Niko Jokhadze: Edited file
+4/12/2023 - Niko Jokhadze: Finished implementing methods
+*/
 
 class Bird extends Agent {
     public int speed;
@@ -14,6 +21,7 @@ class Bird extends Agent {
     public Bird() {
         speed = Utilities.rng.nextInt(5) + 1;
         heading = Heading.randomHeading();
+        this.setAgentColor(Color.WHITE);
     }
 
     public void update() {

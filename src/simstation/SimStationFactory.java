@@ -1,10 +1,14 @@
-
 package simstation;
 
 import mvc.Command;
 import mvc.Model;
 import mvc.View;
 import java.io.Serializable;
+
+/* Class "SimStationFactory" Datalog
+4/7/2023 - Allen Tran: Created file
+4/9/2023 - Minh Bui: Implemented all methods
+*/
 
 public class SimStationFactory implements SimFactory, Serializable {
 
@@ -48,16 +52,16 @@ public class SimStationFactory implements SimFactory, Serializable {
     public String[] getHelp() {
         // put something later
         String[] cmmds = new String[5];
-        cmmds[0] = "Start: start the simulation";
-        cmmds[1] = "Suspend: pause the simulation";
-        cmmds[2] = "Resume: resume the simulation";
-        cmmds[3] = "Stop: stop the simulation";
-        cmmds[4] = "Stats: check #of agents and clock";
+        cmmds[0] = "Start: Start/Restart the simulation";
+        cmmds[1] = "Suspend: Pause the simulation";
+        cmmds[2] = "Resume: Resume the simulation";
+        cmmds[3] = "Stop: Stop the simulation";
+        cmmds[4] = "Stats: Check # of agents, clock, and other information";
         return cmmds;
     }
 
     @Override
     public String about() {
-        return "Sim station version 1.0. copyright 2023 by ";
+        return "Sim station version 1.0. copyright 2023 by Allen Tran, Minh Bui, and Niko Jokhadze";
     }
 }

@@ -1,10 +1,13 @@
-
 package simstation;
 
 import mvc.*;
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
+
+/* Class "SimStationPanel" Datalog
+4/7/2023 - Allen Tran: Created file
+4/9/2023 - Allen Tran and Minh Bui: Implemented all methods
+*/
 
 public class SimStationPanel extends AppPanel {
 
