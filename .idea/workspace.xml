@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0e17158-8a55-4aac-801d-f1e730a35b1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/FlockingSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/FlockingSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/PlagueSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/PlagueSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestCases/PrisonerDilemma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/PrisonerDilemma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases/RandomWalkSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases/RandomWalkSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simstation/SimStationFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +27,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="minh" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -74,8 +87,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RandomWalkSimulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestCases.RandomWalkSimulation" />
+      <module name="SimStation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RandomWalkSimulation" />
+        <item itemvalue="Application.FlockingSimulation" />
+        <item itemvalue="Application.RandomWalkSimulation" />
+        <item itemvalue="Application.FlockingSimulation" />
         <item itemvalue="Application.FlockingSimulation" />
       </list>
     </recent_temporary>
@@ -124,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681411315275</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added coloring to agents for all test cases.">
+      <created>1681701113206</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681701113206</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +179,7 @@
     <MESSAGE value="Worked on RandomWalkSimulation, unsure if it works&#10;Added randomHeading method to enum class" />
     <MESSAGE value="Rename Flocking to FlockingSimulation" />
     <MESSAGE value="Added setColor to Agent and made getNeightbor take a radius as a parameter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added setColor to Agent and made getNeightbor take a radius as a parameter." />
+    <MESSAGE value="Added coloring to agents for all test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added coloring to agents for all test cases." />
   </component>
 </project>

@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 4/9/2023 - Niko Jokhadze: Created file
 4/15/2023 - Minh Bui: Implemented all methods
 4/16/2023 - Minh Bui: Revised and finalized all methods
+4/16/2023 - Niko Jokhadze: Made sure stats, color, and help functions were all functional
 */
 
 abstract class AbstractStrategy implements Serializable {
@@ -22,8 +23,8 @@ abstract class AbstractStrategy implements Serializable {
     abstract boolean areStrategiesEqual(AbstractStrategy other);
 }
 
-class StatsCommand extends Command {
-    public StatsCommand(Model model) {
+class PrisonerStatsCommand extends Command {
+    public PrisonerStatsCommand(Model model) {
         super(model);
     }
 
@@ -97,18 +98,20 @@ class PrisonerFactory extends SimStationFactory {
     }
 
     public String getTitle() {
-        return "prison";
+        return "Prisoner's Dilemma";
     }
 
     @Override
     public String[] getHelp() {
-        // put something later
-        String[] cmmds = new String[5];
-        cmmds[0] = "#agents: # of dots";
-        cmmds[1] = "clock: start timer when you start the simulation and pause when you press suspend";
-        cmmds[2] = "cheat vs cooperate: fitness of cheat is incremented by 5pts";
-        cmmds[3] = "cheat vs cheat: fitness is incremented by 1pts for both";
-        cmmds[4] = "cooperate vs cooperate: fitness is incremented by 3pts for both";
+        String[] cmmds = new String[6];
+        cmmds[0] = "# Agents: # of dots";
+        cmmds[1] = "Clock: Start timer when you start the simulation and pause when you press suspend";
+        cmmds[2] = "Cheat vs cooperate: Fitness of cheat is incremented by 5 points";
+        cmmds[3] = "Cheat vs cheat: Fitness is incremented by 1 points for both";
+        cmmds[4] = "Cooperate vs cooperate: Fitness is incremented by 3 points for both";
+        cmmds[5] = "Description: Prisoner agents randomly interact with one another and decide if" +
+                "\n they should cooperate or cheat with each other, using one of the 4 strategies listed" +
+                "\n above. Score is based on successful cooperation/cheating among the different strategies.";
 
         return cmmds;
     }
@@ -188,8 +191,8 @@ public class PrisonerDilemma extends Simulation {
     // used to create a new stats panel for Prisoner stats
     public void stats() {
         JFrame frame = new JFrame();
-        JOptionPane.showMessageDialog(frame, "#agents = " + NUM_OF_AGENTS
-                + "\nclock = " + clock + "\n" + getStats());
+        JOptionPane.showMessageDialog(frame, "# Agents = " + NUM_OF_AGENTS
+                + "\nClock = " + clock + "\n" + getStats());
     }
 
     private String getStats() {

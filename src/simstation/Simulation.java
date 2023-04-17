@@ -89,8 +89,8 @@ public class Simulation extends Model {
 
     public void stats() {
         JFrame frame = new JFrame();
-        JOptionPane.showMessageDialog(frame, "#agents = " + NUM_OF_AGENTS
-                + "\nclock = " + clock);
+        JOptionPane.showMessageDialog(frame, "# of agents = " + NUM_OF_AGENTS
+                + "\nClock = " + clock);
     }
 
     public synchronized Agent getNeighbor(Agent a, int radius) {

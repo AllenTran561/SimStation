@@ -2,6 +2,8 @@ package TestCases;
 
 import mvc.*;
 import simstation.*;
+
+import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
@@ -9,6 +11,7 @@ import java.util.Random;
 4/9/2023 - Niko Jokhadze: Created file
 4/9/2023 - Niko Jokhadze: Edited file
 4/12/2023 - Niko Jokhadze: Finished implementing methods
+4/16/2023 - Niko Jokhadze: Made sure stats, color, and help functions were all functional
 */
 
 class Bird extends Agent {
@@ -36,6 +39,18 @@ class Bird extends Agent {
     }
 }
 
+class FlockingStatsCommand extends Command {
+    public FlockingStatsCommand(Model model) {
+        super(model);
+    }
+
+    @Override
+    public void execute() {
+        Simulation flocking = (Simulation) model;
+        flocking.stats();
+    }
+}
+
 class FlockingFactory extends SimStationFactory {
     public Model makeModel() {
         return new FlockingSimulation();
@@ -45,8 +60,16 @@ class FlockingFactory extends SimStationFactory {
         return "Flocking";
     }
 
-    public String about() {
-        return "";
+    @Override
+    public String[] getHelp() {
+
+        String[] cmmds = new String[3];
+        cmmds[0] = "# Agents: # of dots that represent birds";
+        cmmds[1] = "Clock: start timer when you start the simulation and pause when you press suspend";
+        cmmds[2] = "Description: Bird agents move at random speeds and random form flocks upon " +
+                "\n close proximity until all agents fly in the same direction and speed.";
+
+        return cmmds;
     }
 }
 
@@ -62,19 +85,25 @@ public class FlockingSimulation extends Simulation {
         }
     }
 
-    public String[] getStats() {
+    public void stats() {
+        JFrame frame = new JFrame();
+        JOptionPane.showMessageDialog(frame, getStats());
+    }
+
+    private String getStats() {
+        String statsString = "";
         int[] speedCount = new int[] {0, 0, 0, 0, 0};
         for (Agent a : agentList) {
             Bird b = (Bird) a;
             speedCount[b.speed - 1]++;
         }
-        String[] stats = new String[5];
-        stats[0] = "#birds @ speed 1 = " + speedCount[0];
-        stats[1] = "#birds @ speed 2 = " + speedCount[1];
-        stats[2] = "#birds @ speed 3 = " + speedCount[2];
-        stats[3] = "#birds @ speed 4 = " + speedCount[3];
-        stats[4] = "#birds @ speed 5 = " + speedCount[4];
-        return stats;
+
+        statsString = "# of birds at speed 1 = " + speedCount[0]+
+                "\n# of birds at speed 2 = " + speedCount[1] +
+                "\n# of birds at speed 3 = " + speedCount[2] +
+                "\n# of birds at speed 4 = " + speedCount[3] +
+                "\n# of birds at speed 5 = " + speedCount[4];
+        return statsString;
     }
 
     public static void main(String[] args) {

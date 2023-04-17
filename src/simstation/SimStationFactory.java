@@ -62,6 +62,7 @@ public class SimStationFactory implements SimFactory, Serializable {
 
     @Override
     public String about() {
-        return "Sim station version 1.0. copyright 2023 by Allen Tran, Minh Bui, and Niko Jokhadze";
+        return "SimStation version 2.0" +
+                "\nCopyright 2023 by Allen Tran, Minh Bui, and Niko Jokhadze";
     }
 }
